@@ -1,0 +1,33 @@
+<application>
+  <component name="LanguageInjectionConfiguration">
+    <option name="INSTRUMENTATION" value="ASSERT" />
+    <option name="LANGUAGE_ANNOTATION" value="org.intellij.lang.annotations.Language" />
+    <option name="PATTERN_ANNOTATION" value="org.intellij.lang.annotations.Pattern" />
+    <option name="SUBST_ANNOTATION" value="org.intellij.lang.annotations.Subst" />
+    <option name="RESOLVE_REFERENCES" value="true" />
+    <injection language="DTD" injector-id="xml">
+      <display-name>EditText/@id</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("id")).withNamespace(string().equalTo("http://schemas.android.com/apk/res/android")).withParent(xmlTag().withLocalName(string().equalTo("EditText")))]]></place>
+    </injection>
+    <injection language="JAVA" injector-id="xml">
+      <display-name>RelativeLayout/@paddingRight</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("paddingRight")).withNamespace(string().equalTo("http://schemas.android.com/apk/res/android")).withParent(xmlTag().withLocalName(string().equalTo("RelativeLayout")))]]></place>
+    </injection>
+    <injection language="DTD" injector-id="xml">
+      <display-name>android.support.constraint.ConstraintLayout</display-name>
+      <place><![CDATA[xmlTag().withLocalName(string().matches("android.support.constraint.ConstraintLayout"))]]></place>
+    </injection>
+    <injection language="DTD" injector-id="xml">
+      <display-name>android.support.design.widget.BottomNavigationView/@menu</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("menu")).withParent(xmlTag().withLocalName(string().matches("android.support.design.widget.BottomNavigationView")))]]></place>
+    </injection>
+    <injection language="Manifest" injector-id="xml">
+      <display-name>full-backup-content</display-name>
+      <place><![CDATA[xmlTag().withLocalName(string().equalTo("full-backup-content"))]]></place>
+    </injection>
+    <injection language="Manifest" injector-id="xml">
+      <display-name>manifest</display-name>
+      <place><![CDATA[xmlTag().withLocalName(string().equalTo("manifest"))]]></place>
+    </injection>
+  </component>
+</application>
